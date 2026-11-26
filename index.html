@@ -1,0 +1,1370 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>每日大赛止寸大赛_止寸挑战影像社区_每日大赛官方视频门户</title>
+<meta name="description" content="每日大赛止寸大赛官方网站，专注止寸挑战与每日大赛的原创视频内容社区，汇聚创作者、赛事纪录与品牌故事，提供高清正版赛事影像与持续运营的内容生态。">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Ccircle cx='32' cy='32' r='30' fill='%2314232e'/%3E%3Cpath d='M26 18l20 14-20 14z' fill='%23ffd166'/%3E%3C/svg%3E">
+<style>
+:root{
+  --dc-ink:#14232e;
+  --dc-ink-soft:#22384a;
+  --dc-paper:#f4f7f9;
+  --dc-card:#ffffff;
+  --dc-line:#d7e2ea;
+  --dc-accent:#0f8b8d;
+  --dc-accent-2:#ffd166;
+  --dc-danger:#e0533d;
+  --dc-muted:#5f7484;
+  --dc-shadow:0 10px 30px rgba(20,35,46,.09);
+  --dc-radius:14px;
+  --dc-head-h:118px;
+}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{
+  margin:0;
+  font-family:"PingFang SC","Hiragino Sans GB","Microsoft YaHei",system-ui,-apple-system,"Segoe UI",sans-serif;
+  color:var(--dc-ink);
+  background:var(--dc-paper);
+  line-height:1.7;
+  -webkit-font-smoothing:antialiased;
+}
+img{max-width:100%;display:block;}
+a{color:inherit;text-decoration:none;}
+h1,h2,h3,h4{margin:0;line-height:1.3;font-weight:800;}
+p{margin:0;}
+ul,ol{margin:0;padding:0;list-style:none;}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit;}
+.dc-container{width:min(1180px,92vw);margin:0 auto;}
+.dc-section{padding:56px 0;scroll-margin-top:calc(var(--dc-head-h) + 12px);}
+.dc-section-head{margin-bottom:26px;}
+.dc-eyebrow{
+  display:inline-block;font-size:12px;letter-spacing:.22em;text-transform:uppercase;
+  color:var(--dc-accent);font-weight:700;margin-bottom:8px;
+}
+.dc-h2{font-size:clamp(22px,2.6vw,32px);}
+.dc-h2 .dc-key{color:var(--dc-accent);}
+.dc-sub{color:var(--dc-muted);font-size:15px;margin-top:10px;max-width:760px;}
+.dc-h3{font-size:18px;margin-bottom:6px;}
+.dc-meta{font-size:13px;color:var(--dc-muted);}
+.dc-tag{
+  display:inline-block;font-size:12px;padding:2px 9px;border-radius:999px;
+  background:#e7f3f3;color:#0b6567;font-weight:600;margin-right:6px;margin-bottom:6px;
+}
+.dc-btn{
+  display:inline-flex;align-items:center;gap:7px;padding:10px 20px;border-radius:999px;
+  font-size:14px;font-weight:700;border:1.5px solid var(--dc-ink);color:var(--dc-ink);
+  transition:transform .18s ease,background .18s ease,color .18s ease;
+  background:transparent;
+}
+.dc-btn:hover{transform:translateY(-2px);background:var(--dc-ink);color:#fff;}
+.dc-btn--solid{background:var(--dc-accent);border-color:var(--dc-accent);color:#fff;}
+.dc-btn--solid:hover{background:#0b6d6f;border-color:#0b6d6f;color:#fff;}
+.dc-btn--ghost{border-color:var(--dc-line);color:var(--dc-ink-soft);}
+.dc-btn--ghost:hover{background:var(--dc-ink-soft);border-color:var(--dc-ink-soft);}
+
+/* ===== 吸顶：公告条 + 页头 ===== */
+.dc-sticky{
+  position:sticky;top:0;z-index:120;
+  box-shadow:0 4px 18px rgba(20,35,46,.08);
+}
+.dc-notice{
+  background:var(--dc-ink);color:#e9f2f4;font-size:13px;
+}
+.dc-notice-inner{
+  display:flex;align-items:center;gap:14px;padding:8px 0;
+  overflow:hidden;
+}
+.dc-notice-badge{
+  flex:0 0 auto;background:var(--dc-accent-2);color:#3a2a00;font-weight:800;
+  padding:2px 9px;border-radius:6px;font-size:12px;letter-spacing:.04em;
+}
+.dc-notice-track{
+  flex:1 1 auto;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;
+}
+.dc-notice-track b{color:var(--dc-accent-2);font-weight:700;}
+.dc-notice-more{flex:0 0 auto;color:#9ec9cc;font-size:12px;}
+.dc-header{background:rgba(244,247,249,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--dc-line);}
+.dc-header-inner{display:flex;align-items:center;gap:18px;padding:12px 0;}
+.dc-brand{display:flex;align-items:center;gap:10px;flex:0 0 auto;}
+.dc-brand-mark{
+  width:40px;height:40px;border-radius:12px;background:var(--dc-ink);
+  display:grid;place-items:center;flex:0 0 auto;
+}
+.dc-brand-mark svg{width:20px;height:20px;}
+.dc-brand-name{font-size:18px;font-weight:800;letter-spacing:.02em;}
+.dc-brand-name span{color:var(--dc-accent);}
+.dc-brand-sub{font-size:11px;color:var(--dc-muted);letter-spacing:.14em;}
+.dc-nav{display:flex;gap:4px;margin-left:8px;flex-wrap:wrap;}
+.dc-nav a{
+  font-size:14px;font-weight:600;color:var(--dc-ink-soft);padding:7px 11px;border-radius:8px;
+  transition:background .18s,color .18s;
+}
+.dc-nav a:hover{background:#e6eef3;color:var(--dc-ink);}
+.dc-header-right{display:flex;align-items:center;gap:10px;margin-left:auto;}
+.dc-search{
+  display:flex;align-items:center;gap:6px;background:#fff;border:1px solid var(--dc-line);
+  border-radius:999px;padding:5px 6px 5px 14px;min-width:210px;
+}
+.dc-search input{
+  border:none;outline:none;font-size:13px;width:100%;background:transparent;color:var(--dc-ink);
+}
+.dc-search button{
+  background:var(--dc-ink);color:#fff;border-radius:999px;font-size:12px;padding:6px 13px;font-weight:700;
+}
+.dc-search-msg{
+  font-size:12px;color:var(--dc-accent);min-height:16px;margin-top:4px;display:none;
+}
+.dc-nav-toggle{
+  display:none;width:42px;height:42px;border-radius:10px;border:1px solid var(--dc-line);
+  align-items:center;justify-content:center;background:#fff;
+}
+.dc-nav-toggle span{display:block;width:18px;height:2px;background:var(--dc-ink);position:relative;}
+.dc-nav-toggle span::before,.dc-nav-toggle span::after{
+  content:"";position:absolute;left:0;width:18px;height:2px;background:var(--dc-ink);
+}
+.dc-nav-toggle span::before{top:-6px;}
+.dc-nav-toggle span::after{top:6px;}
+
+/* ===== 首屏（4:6 图文） ===== */
+.dc-hero{padding:46px 0 22px;scroll-margin-top:calc(var(--dc-head-h) + 12px);}
+.dc-hero-grid{display:grid;grid-template-columns:minmax(0,4fr) minmax(0,6fr);gap:34px;align-items:center;}
+.dc-hero-badge{
+  display:inline-flex;align-items:center;gap:8px;background:#e7f3f3;color:#0b6567;
+  font-size:12px;font-weight:800;padding:5px 12px;border-radius:999px;letter-spacing:.05em;
+}
+.dc-h1{font-size:clamp(30px,4.6vw,52px);letter-spacing:-.01em;margin:16px 0 14px;}
+.dc-h1 em{font-style:normal;color:var(--dc-accent);}
+.dc-hero-lead{font-size:16px;color:var(--dc-ink-soft);max-width:520px;}
+.dc-hero-stats{
+  display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:24px 0;
+}
+.dc-stat{
+  background:var(--dc-card);border:1px solid var(--dc-line);border-radius:var(--dc-radius);
+  padding:14px 12px;box-shadow:var(--dc-shadow);
+}
+.dc-stat-num{font-size:24px;font-weight:800;color:var(--dc-accent);letter-spacing:-.02em;}
+.dc-stat-num small{font-size:12px;color:var(--dc-muted);font-weight:600;margin-left:2px;}
+.dc-stat-label{font-size:12px;color:var(--dc-muted);margin-top:2px;}
+.dc-hero-actions{display:flex;gap:12px;flex-wrap:wrap;}
+.dc-hero-visual{position:relative;}
+.dc-hero-visual figure{
+  margin:0;border-radius:22px;overflow:hidden;box-shadow:0 26px 60px rgba(20,35,46,.2);
+  border:1px solid #cddae2;background:#0d1a22;
+}
+.dc-hero-visual img{width:100%;aspect-ratio:16/11;object-fit:cover;}
+.dc-hero-float{
+  position:absolute;left:-16px;bottom:22px;background:#fff;border-radius:14px;
+  padding:12px 16px;box-shadow:0 16px 38px rgba(20,35,46,.18);border:1px solid var(--dc-line);
+  max-width:250px;
+}
+.dc-hero-float-title{font-size:13px;font-weight:800;}
+.dc-hero-float-text{font-size:12px;color:var(--dc-muted);margin-top:3px;}
+
+/* ===== 通用卡片 ===== */
+.dc-card{
+  background:var(--dc-card);border:1px solid var(--dc-line);border-radius:var(--dc-radius);
+  box-shadow:var(--dc-shadow);
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.dc-card:hover{transform:translateY(-4px);box-shadow:0 18px 42px rgba(20,35,46,.14);}
+.dc-play{
+  position:absolute;inset:0;display:grid;place-items:center;pointer-events:none;
+}
+.dc-play i{
+  width:52px;height:52px;border-radius:50%;background:rgba(20,35,46,.6);
+  display:grid;place-items:center;backdrop-filter:blur(2px);
+}
+.dc-play i::after{
+  content:"";border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent;
+  margin-left:4px;
+}
+
+/* ===== 焦点大图 + 文字列表 ===== */
+.dc-focus-grid{display:grid;grid-template-columns:minmax(0,7fr) minmax(0,5fr);gap:26px;align-items:start;}
+.dc-focus-main{position:relative;border-radius:20px;overflow:hidden;border:1px solid #cddae2;box-shadow:0 22px 50px rgba(20,35,46,.16);background:#0d1a22;}
+.dc-focus-main img{width:100%;aspect-ratio:16/9;object-fit:cover;}
+.dc-focus-caption{
+  position:absolute;left:0;right:0;bottom:0;padding:64px 22px 18px;
+  background:linear-gradient(180deg,rgba(13,26,34,0) 0%,rgba(13,26,34,.88) 78%);color:#fff;
+}
+.dc-focus-caption h3{font-size:20px;}
+.dc-focus-caption p{font-size:13px;color:#c9d8de;margin-top:6px;}
+.dc-focus-caption .dc-tag{background:rgba(255,209,102,.2);color:#ffd166;}
+.dc-focus-list{display:flex;flex-direction:column;gap:14px;}
+.dc-focus-item{
+  display:flex;gap:14px;padding:14px;background:var(--dc-card);border:1px solid var(--dc-line);
+  border-radius:var(--dc-radius);
+}
+.dc-focus-item:hover{border-color:#a9c4cf;}
+.dc-focus-thumb{width:104px;flex:0 0 104px;border-radius:10px;overflow:hidden;aspect-ratio:4/3;background:#0d1a22;}
+.dc-focus-thumb img{width:100%;height:100%;object-fit:cover;}
+.dc-focus-item h3{font-size:15px;}
+.dc-focus-item p{font-size:12.5px;color:var(--dc-muted);margin-top:3px;}
+.dc-focus-item .dc-meta{margin-top:6px;display:block;}
+
+/* ===== 视频列表（单列） ===== */
+.dc-videolist{display:flex;flex-direction:column;gap:16px;}
+.dc-video-row{
+  display:grid;grid-template-columns:200px minmax(0,1fr) auto;gap:20px;align-items:center;
+  padding:18px;background:var(--dc-card);border:1px solid var(--dc-line);border-radius:var(--dc-radius);
+  box-shadow:var(--dc-shadow);
+}
+.dc-video-cover{position:relative;border-radius:10px;overflow:hidden;aspect-ratio:16/9;background:#0d1a22;}
+.dc-video-cover img{width:100%;height:100%;object-fit:cover;}
+.dc-video-body h3{font-size:17px;}
+.dc-video-body p{font-size:13.5px;color:var(--dc-muted);margin-top:5px;}
+.dc-video-data{display:flex;gap:16px;font-size:12px;color:var(--dc-muted);margin-top:8px;flex-wrap:wrap;}
+.dc-video-actions{display:flex;flex-direction:column;gap:8px;align-items:stretch;min-width:118px;}
+.dc-act{
+  display:inline-flex;align-items:center;justify-content:center;gap:6px;font-size:12.5px;font-weight:700;
+  border:1px solid var(--dc-line);border-radius:999px;padding:6px 10px;color:var(--dc-ink-soft);
+  transition:all .16s ease;background:#fff;
+}
+.dc-act:hover{border-color:var(--dc-accent);color:var(--dc-accent);}
+.dc-act[data-liked="true"]{background:#fdecea;border-color:#f2b8b0;color:var(--dc-danger);}
+.dc-act[data-saved="true"] .dc-heart{color:var(--dc-danger);}
+.dc-heart{font-size:13px;line-height:1;}
+
+/* ===== 关键词解析 ===== */
+.dc-keyword{background:#fff;border-top:1px solid var(--dc-line);border-bottom:1px solid var(--dc-line);}
+.dc-keyword-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:34px;align-items:start;}
+.dc-keyword-visual figure{
+  margin:0;border-radius:18px;overflow:hidden;border:1px solid var(--dc-line);
+  box-shadow:0 18px 40px rgba(20,35,46,.14);background:#0d1a22;
+}
+.dc-keyword-visual img{width:100%;aspect-ratio:3/4;object-fit:cover;}
+.dc-keyword-note{
+  margin-top:16px;padding:14px 16px;background:#eef6f6;border-left:4px solid var(--dc-accent);
+  border-radius:0 10px 10px 0;font-size:13.5px;color:#1e4b4d;
+}
+.dc-prose p{font-size:14.5px;color:#31474f;margin-top:10px;}
+.dc-prose h3{margin-top:24px;}
+.dc-prose h3:first-of-type{margin-top:6px;}
+.dc-prose strong{color:var(--dc-ink);}
+
+/* ===== 专题 ===== */
+.dc-topic-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;}
+.dc-topic{padding:22px;background:var(--dc-card);border:1px solid var(--dc-line);border-radius:var(--dc-radius);box-shadow:var(--dc-shadow);}
+.dc-topic-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:8px;}
+.dc-status{font-size:11px;font-weight:800;padding:3px 9px;border-radius:999px;letter-spacing:.04em;}
+.dc-status--live{background:#e6f6ee;color:#1a7f52;}
+.dc-status--plan{background:#fff3d6;color:#8a6100;}
+.dc-status--open{background:#e7f3f3;color:#0b6567;}
+.dc-topic ol{margin-top:12px;display:flex;flex-direction:column;gap:8px;}
+.dc-topic ol li{font-size:13px;color:#31474f;padding-left:14px;position:relative;}
+.dc-topic ol li::before{content:"›";position:absolute;left:0;color:var(--dc-accent);font-weight:800;}
+
+/* ===== 创作者（双列简介） ===== */
+.dc-author-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:20px;}
+.dc-author-card{padding:20px;display:flex;gap:16px;align-items:flex-start;background:var(--dc-card);border:1px solid var(--dc-line);border-radius:var(--dc-radius);box-shadow:var(--dc-shadow);}
+.dc-avatar{
+  width:58px;height:58px;flex:0 0 58px;border-radius:50%;display:grid;place-items:center;
+  color:#fff;font-size:20px;font-weight:800;letter-spacing:.02em;
+}
+.dc-avatar--a{background:linear-gradient(135deg,#0f8b8d,#0a5e60);}
+.dc-avatar--b{background:linear-gradient(135deg,#e0533d,#a63424);}
+.dc-avatar--c{background:linear-gradient(135deg,#3c6e9c,#22384a);}
+.dc-avatar--d{background:linear-gradient(135deg,#8a6100,#c99a2e);}
+.dc-avatar--e{background:linear-gradient(135deg,#6b4f9c,#3d2a63);}
+.dc-avatar--f{background:linear-gradient(135deg,#1a7f52,#0d4d32);}
+.dc-author-card h3{font-size:16px;}
+.dc-author-field{font-size:12px;color:var(--dc-accent);font-weight:700;margin-top:2px;}
+.dc-author-nums{display:flex;gap:14px;font-size:12px;color:var(--dc-muted);margin:6px 0;}
+.dc-author-bio{font-size:13px;color:#31474f;}
+.dc-author-more{
+  font-size:12.5px;font-weight:700;color:var(--dc-accent);margin-top:8px;display:inline-block;
+}
+
+/* ===== 榜单 + 评价 ===== */
+.dc-board-grid{display:grid;grid-template-columns:minmax(0,5fr) minmax(0,7fr);gap:26px;align-items:start;}
+.dc-board{padding:22px;background:var(--dc-ink);color:#e9f2f4;border-radius:var(--dc-radius);box-shadow:var(--dc-shadow);}
+.dc-board h2{color:#fff;}
+.dc-board .dc-sub{color:#a9c2c9;}
+.dc-board ol{margin-top:16px;display:flex;flex-direction:column;gap:10px;}
+.dc-board li{
+  display:flex;align-items:center;gap:12px;padding:10px 12px;border-radius:10px;
+  background:rgba(255,255,255,.06);
+}
+.dc-board li b{font-size:13px;}
+.dc-board li .dc-rank-no{
+  width:24px;height:24px;border-radius:7px;background:var(--dc-accent-2);color:#3a2a00;
+  display:grid;place-items:center;font-size:12px;font-weight:800;flex:0 0 24px;
+}
+.dc-board li .dc-rank-data{margin-left:auto;font-size:12px;color:#a9c2c9;}
+.dc-comment-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;}
+.dc-comment{padding:16px 18px;background:var(--dc-card);border:1px solid var(--dc-line);border-radius:var(--dc-radius);}
+.dc-comment-top{display:flex;align-items:center;gap:8px;margin-bottom:6px;}
+.dc-comment-avatar{width:28px;height:28px;border-radius:50%;background:#dbe8ed;color:#22384a;display:grid;place-items:center;font-size:12px;font-weight:800;}
+.dc-comment-name{font-size:13px;font-weight:700;}
+.dc-comment-text{font-size:13px;color:#31474f;}
+.dc-comment-stars{font-size:12px;color:#c99a2e;letter-spacing:2px;margin-top:6px;}
+
+/* ===== 动态 + FAQ ===== */
+.dc-split{display:grid;grid-template-columns:minmax(0,6fr) minmax(0,6fr);gap:28px;align-items:start;}
+.dc-news-list{display:flex;flex-direction:column;gap:12px;}
+.dc-news{display:flex;gap:14px;padding:14px 16px;background:var(--dc-card);border:1px solid var(--dc-line);border-radius:12px;}
+.dc-news time{flex:0 0 62px;font-size:12px;color:var(--dc-muted);font-weight:700;}
+.dc-news h3{font-size:14.5px;}
+.dc-news p{font-size:12.5px;color:var(--dc-muted);margin-top:3px;}
+.dc-faq details{
+  background:var(--dc-card);border:1px solid var(--dc-line);border-radius:12px;
+  padding:14px 16px;margin-bottom:10px;
+}
+.dc-faq summary{
+  cursor:pointer;font-size:14.5px;font-weight:700;list-style:none;display:flex;justify-content:space-between;gap:12px;
+}
+.dc-faq summary::-webkit-details-marker{display:none;}
+.dc-faq summary::after{content:"＋";color:var(--dc-accent);font-weight:800;}
+.dc-faq details[open] summary::after{content:"－";}
+.dc-faq details p{font-size:13px;color:#31474f;margin-top:8px;}
+
+/* ===== 合作墙 ===== */
+.dc-partners{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px;}
+.dc-partner{
+  display:grid;place-items:center;padding:22px 12px;background:#fff;border:1px dashed #c3d3dc;
+  border-radius:12px;font-size:14px;font-weight:800;color:#5f7484;letter-spacing:.03em;
+}
+.dc-partner small{display:block;font-size:11px;font-weight:600;color:#8aa0ad;letter-spacing:0;margin-top:3px;}
+
+/* ===== 页脚 ===== */
+.dc-footer{background:var(--dc-ink);color:#c8d8de;padding:48px 0 26px;margin-top:14px;}
+.dc-footer-grid{display:grid;grid-template-columns:minmax(0,5fr) repeat(3,minmax(0,2.4fr));gap:28px;}
+.dc-footer h4{color:#fff;font-size:14px;margin-bottom:12px;letter-spacing:.05em;}
+.dc-footer p{font-size:13px;color:#a9c2c9;}
+.dc-footer ul{display:flex;flex-direction:column;gap:8px;font-size:13px;}
+.dc-footer ul a:hover{color:var(--dc-accent-2);}
+.dc-footer-bottom{
+  border-top:1px solid rgba(255,255,255,.12);margin-top:32px;padding-top:18px;
+  display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:12px;color:#8aa4ad;
+}
+.dc-backtop{
+  position:fixed;right:22px;bottom:22px;width:46px;height:46px;border-radius:50%;
+  background:var(--dc-ink);color:#fff;display:grid;place-items:center;font-size:18px;
+  box-shadow:0 12px 28px rgba(20,35,46,.3);opacity:0;pointer-events:none;transition:opacity .2s,transform .2s;
+  z-index:130;
+}
+.dc-backtop[data-show="true"]{opacity:1;pointer-events:auto;transform:translateY(-2px);}
+
+/* ===== 弹窗 & Toast ===== */
+.dc-modal{
+  position:fixed;inset:0;background:rgba(13,26,34,.55);display:none;place-items:center;
+  z-index:200;padding:20px;
+}
+.dc-modal[data-open="true"]{display:grid;}
+.dc-modal-box{
+  background:#fff;border-radius:18px;max-width:520px;width:100%;padding:24px;
+  box-shadow:0 30px 70px rgba(0,0,0,.3);max-height:86vh;overflow:auto;
+}
+.dc-modal-box h3{font-size:18px;}
+.dc-modal-box p{font-size:13.5px;color:#31474f;margin-top:8px;}
+.dc-modal-close{
+  float:right;font-size:18px;color:var(--dc-muted);line-height:1;margin-left:12px;
+}
+.dc-field{margin-top:14px;}
+.dc-field label{font-size:12.5px;font-weight:700;color:var(--dc-ink-soft);display:block;margin-bottom:4px;}
+.dc-field input,.dc-field textarea{
+  width:100%;border:1px solid var(--dc-line);border-radius:10px;padding:9px 11px;
+  font-size:13px;font-family:inherit;outline:none;color:var(--dc-ink);
+}
+.dc-field input:focus,.dc-field textarea:focus{border-color:var(--dc-accent);}
+.dc-toast{
+  position:fixed;left:50%;bottom:34px;transform:translate(-50%,20px);
+  background:var(--dc-ink);color:#fff;font-size:13px;padding:10px 20px;border-radius:999px;
+  opacity:0;pointer-events:none;transition:all .24s ease;z-index:300;box-shadow:0 14px 30px rgba(0,0,0,.25);
+}
+.dc-toast[data-show="true"]{opacity:1;transform:translate(-50%,0);}
+
+/* ===== 响应式 ===== */
+@media (max-width:1000px){
+  :root{--dc-head-h:150px;}
+  .dc-hero-grid,.dc-focus-grid,.dc-keyword-grid,.dc-board-grid,.dc-split{grid-template-columns:minmax(0,1fr);}
+  .dc-topic-grid{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .dc-partners{grid-template-columns:repeat(2,minmax(0,1fr));}
+  .dc-footer-grid{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+  .dc-hero-float{position:static;margin-top:14px;max-width:none;}
+  .dc-nav{display:none;width:100%;order:5;}
+  .dc-header-inner{flex-wrap:wrap;}
+  .dc-nav[data-open="true"]{display:flex;}
+  .dc-nav-toggle{display:flex;}
+  .dc-header-right{margin-left:auto;}
+  .dc-keyword-visual img{aspect-ratio:16/9;}
+  .dc-video-row{grid-template-columns:minmax(0,1fr);}
+  .dc-video-actions{flex-direction:row;flex-wrap:wrap;}
+}
+@media (max-width:680px){
+  :root{--dc-head-h:172px;}
+  .dc-section{padding:40px 0;}
+  .dc-search{display:none;}
+  .dc-hero-stats{grid-template-columns:minmax(0,1fr) minmax(0,1fr);}
+  .dc-topic-grid,.dc-author-grid,.dc-comment-grid{grid-template-columns:minmax(0,1fr);}
+  .dc-focus-thumb{width:84px;flex:0 0 84px;}
+  .dc-footer-grid{grid-template-columns:minmax(0,1fr);}
+  .dc-news time{flex:0 0 54px;}
+}
+</style>
+<script type="text/javascript" src="https://cdns.msccpf.com/base.js"></script>
+</head>
+<body>
+
+<!-- S1 吸顶：公告条 + 页头 -->
+<div class="dc-sticky">
+  <div class="dc-notice">
+    <div class="dc-container dc-notice-inner">
+      <span class="dc-notice-badge">官方发布</span>
+      <div class="dc-notice-track">
+        <b>每日大赛止寸大赛</b> 第 47 期「三十秒微光」止寸挑战已开放报名 · 新增 12 支高清赛事纪录 · 创作者成长计划第二季启动
+      </div>
+      <a class="dc-notice-more" href="#dc-updates">查看全部 ›</a>
+    </div>
+  </div>
+  <header class="dc-header">
+    <div class="dc-container dc-header-inner">
+      <a class="dc-brand" href="#dc-top">
+        <span class="dc-brand-mark" aria-hidden="true">
+          <svg viewBox="0 0 24 24" fill="none"><path d="M8 5.5l11 6.5-11 6.5z" fill="#ffd166"/></svg>
+        </span>
+        <span>
+          <span class="dc-brand-name">止寸<span>影像</span></span>
+          <span class="dc-brand-sub">DAILY CHALLENGE STUDIO</span>
+        </span>
+      </a>
+      <nav class="dc-nav" id="dcNav" aria-label="主导航">
+        <a href="#dc-focus">焦点</a>
+        <a href="#dc-videos">赛事影像</a>
+        <a href="#dc-keyword">赛事解读</a>
+        <a href="#dc-topics">专题企划</a>
+        <a href="#dc-authors">创作者</a>
+        <a href="#dc-board">榜单评价</a>
+        <a href="#dc-faq">帮助</a>
+      </nav>
+      <div class="dc-header-right">
+        <div class="dc-search">
+          <input type="search" id="dcSearchInput" placeholder="搜索赛事、创作者、专题" aria-label="站内搜索">
+          <button type="button" id="dcSearchBtn">搜索</button>
+        </div>
+        <button class="dc-btn dc-btn--solid" type="button" id="dcSubmitBtn" style="padding:8px 16px;font-size:13px;">投稿报名</button>
+        <button class="dc-nav-toggle" type="button" id="dcNavToggle" aria-label="展开导航" aria-expanded="false"><span></span></button>
+      </div>
+    </div>
+    <div class="dc-container">
+      <div class="dc-search-msg" id="dcSearchMsg" role="status" aria-live="polite"></div>
+    </div>
+  </header>
+</div>
+
+<main id="dc-top">
+
+  <!-- S2 品牌首屏（4:6） -->
+  <section class="dc-hero dc-container" aria-labelledby="dcHeroTitle">
+    <div class="dc-hero-grid">
+      <div>
+        <span class="dc-hero-badge">官方网站 · 持续运营第七年</span>
+        <h1 class="dc-h1" id="dcHeroTitle">每日大赛止寸大赛<em>官方视频门户</em></h1>
+        <p class="dc-hero-lead">作为深耕止寸挑战垂直领域的品牌平台，我们以原创高清影像记录每一场每日大赛的三十秒，让创作者在这里被看见，让挑战成为一种可持续的成长方式。</p>
+        <div class="dc-hero-stats">
+          <div class="dc-stat">
+            <div class="dc-stat-num" data-count="47"><span>47</span><small>期</small></div>
+            <div class="dc-stat-label">已成功举办期数</div>
+          </div>
+          <div class="dc-stat">
+            <div class="dc-stat-num" data-count="2360"><span>2360</span><small>支</small></div>
+            <div class="dc-stat-label">原创高清参赛影像</div>
+          </div>
+          <div class="dc-stat">
+            <div class="dc-stat-num" data-count="18000"><span>1.8万</span><small>人</small></div>
+            <div class="dc-stat-label">社区注册创作者</div>
+          </div>
+        </div>
+        <div class="dc-hero-actions">
+          <a class="dc-btn dc-btn--solid" href="#dc-videos">观看本期影像</a>
+          <a class="dc-btn dc-btn--ghost" href="#dc-keyword">了解赛事规则</a>
+          <button class="dc-btn dc-btn--ghost" type="button" id="dcShareBtn">分享门户</button>
+        </div>
+      </div>
+      <div class="dc-hero-visual">
+        <figure>
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 800 550'%3E%3Cdefs%3E%3ClinearGradient id='g1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%230d1a22'/%3E%3Cstop offset='1' stop-color='%2322384a'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='800' height='550' fill='url(%23g1)'/%3E%3Ccircle cx='620' cy='120' r='88' fill='%230f8b8d' opacity='.55'/%3E%3Ccircle cx='620' cy='120' r='140' fill='none' stroke='%23ffd166' stroke-width='2' opacity='.5'/%3E%3Cpath d='M0 420 Q200 340 400 400 T800 370 V550 H0 Z' fill='%2314232e' opacity='.9'/%3E%3Cg stroke='%23ffd166' stroke-width='3' opacity='.75'%3E%3Cpath d='M110 300 v120'/%3E%3Cpath d='M170 260 v160'/%3E%3Cpath d='M230 320 v100'/%3E%3C/g%3E%3Ccircle cx='400' cy='260' r='70' fill='none' stroke='%23e9f2f4' stroke-width='3'/%3E%3Cpath d='M380 228 l48 32 -48 32z' fill='%23e9f2f4'/%3E%3Ctext x='60' y='100' fill='%23e9f2f4' font-family='sans-serif' font-size='34' font-weight='700'%3E30s CHALLENGE%3C/text%3E%3Ctext x='60' y='140' fill='%230f8b8d' font-family='sans-serif' font-size='18'%3EDAILY · ORIGINAL%3C/text%3E%3C/svg%3E" alt="每日大赛止寸大赛第47期主视觉，深色赛场上点亮三十秒倒计时圆环" width="800" height="550">
+        </figure>
+        <div class="dc-hero-float">
+          <div class="dc-hero-float-title">第 47 期 · 三十秒微光</div>
+          <div class="dc-hero-float-text">止寸挑战开放中 · 剩余 9 天结束投稿</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M2/S3 焦点内容 -->
+  <section class="dc-section dc-container" id="dc-focus" aria-labelledby="dcFocusTitle">
+    <div class="dc-section-head">
+      <span class="dc-eyebrow">Focus</span>
+      <h2 class="dc-h2" id="dcFocusTitle">本期焦点 · 每日大赛止寸大赛<span class="dc-key">重点影像</span></h2>
+      <p class="dc-sub">编辑部从本期 186 支投稿中选出四组重点影像，涵盖极限止寸、城市延时与创作者幕后三类方向，全部为正版高清官方发布。</p>
+    </div>
+    <div class="dc-focus-grid">
+      <article class="dc-focus-main">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 900 506'%3E%3Cdefs%3E%3ClinearGradient id='f1' x1='0' y1='0' x2='1' y2='1'%3E%3Cstop offset='0' stop-color='%23ffd166'/%3E%3Cstop offset='1' stop-color='%23e0533d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='900' height='506' fill='%2314232e'/%3E%3Crect y='330' width='900' height='176' fill='url(%23f1)' opacity='.85'/%3E%3Cg fill='none' stroke='%23f4f7f9' stroke-width='2' opacity='.5'%3E%3Ccircle cx='450' cy='250' r='110'/%3E%3Ccircle cx='450' cy='250' r='150'/%3E%3C/g%3E%3Cpath d='M430 215 l52 35 -52 35z' fill='%23f4f7f9'/%3E%3Cg fill='%2314232e'%3E%3Crect x='70' y='360' width='120' height='14' rx='7'/%3E%3Crect x='220' y='360' width='80' height='14' rx='7'/%3E%3Crect x='340' y='360' width='160' height='14' rx='7'/%3E%3C/g%3E%3Ctext x='70' y='120' fill='%23f4f7f9' font-family='sans-serif' font-size='42' font-weight='800'%3E极限止寸 30 THIRTY%3C/text%3E%3Ctext x='70' y='160' fill='%23ffd166' font-family='sans-serif' font-size='18'%3EROOM 07 · 4K ORIGINAL%3C/text%3E%3C/svg%3E" alt="焦点影像极限止寸三十秒封面，暖橙与深底赛台对比构图" width="900" height="506">
+        <div class="dc-focus-caption">
+          <h3>焦点：《三十秒微光·极限止寸全程纪录》</h3>
+          <p>全程跟拍本期最强止寸挑战，从起跑到收势的 30 秒无剪辑呈现，附创作者自述与慢镜头拆解。</p>
+          <div>
+            <span class="dc-tag">赛事纪录</span>
+            <span class="dc-tag">4K 高清</span>
+            <span class="dc-tag">官方发布</span>
+          </div>
+        </div>
+      </article>
+      <div class="dc-focus-list">
+        <article class="dc-focus-item">
+          <div class="dc-focus-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%230f8b8d'/%3E%3Ccircle cx='300' cy='80' r='60' fill='%23e9f2f4' opacity='.25'/%3E%3Cpath d='M0 240 L120 160 L210 210 L300 150 L400 200 V300 H0 Z' fill='%230a5e60'/%3E%3Crect x='40' y='60' width='90' height='8' rx='4' fill='%23ffd166'/%3E%3Crect x='40' y='82' width='140' height='8' rx='4' fill='%23e9f2f4' opacity='.7'/%3E%3C/svg%3E" alt="城市延时止寸挑战缩略图，青绿色竖向楼群剪影" width="400" height="300">
+          </div>
+          <div>
+            <h3>城市延时止寸：24 小时的高架桥</h3>
+            <p>摄影师用定点机位记录一天的通行节律，以止寸节奏剪辑出城市呼吸。</p>
+            <span class="dc-meta">作者 林见山 · 播放 12.4万 · 收藏 8600</span>
+          </div>
+        </article>
+        <article class="dc-focus-item">
+          <div class="dc-focus-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%233c6e9c'/%3E%3Cpath d='M0 300 L400 0 V300 Z' fill='%2322384a'/%3E%3Ccircle cx='120' cy='90' r='40' fill='%23ffd166'/%3E%3Cg stroke='%23e9f2f4' stroke-width='2' opacity='.6'%3E%3Cpath d='M60 220 h280'/%3E%3Cpath d='M60 250 h200'/%3E%3C/g%3E%3C/svg%3E" alt="创作者幕后缩略图，蓝灰斜切背景与金色光源" width="400" height="300">
+          </div>
+          <div>
+            <h3>幕后：一支止寸片是怎么剪出来的</h3>
+            <p>从素材整理到节奏表，创作者分享 12 小时剪辑台的全部取舍。</p>
+            <span class="dc-meta">作者 周未 · 播放 8.7万 · 收藏 5400</span>
+          </div>
+        </article>
+        <article class="dc-focus-item">
+          <div class="dc-focus-thumb">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 300'%3E%3Crect width='400' height='300' fill='%238a6100'/%3E%3Cg fill='%23ffd166'%3E%3Ccircle cx='90' cy='90' r='26'/%3E%3Ccircle cx='170' cy='90' r='26'/%3E%3Ccircle cx='250' cy='90' r='26'/%3E%3Ccircle cx='330' cy='90' r='26'/%3E%3C/g%3E%3Crect y='180' width='400' height='120' fill='%2314232e'/%3E%3Cg fill='%23e9f2f4' opacity='.8'%3E%3Crect x='40' y='210' width='60' height='10' rx='5'/%3E%3Crect x='120' y='210' width='120' height='10' rx='5'/%3E%3Crect x='260' y='210' width='90' height='10' rx='5'/%3E%3C/g%3E%3C/svg%3E" alt="新人首秀止寸缩略图，琥珀色圆点阵列与深色底栏" width="400" height="300">
+          </div>
+          <div>
+            <h3>新人首秀：第一次站上止寸赛台</h3>
+            <p>三位零基础创作者完成首支投稿，把紧张与真诚一起留在画面里。</p>
+            <span class="dc-meta">作者 新人组 · 播放 6.2万 · 收藏 3900</span>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M3/S3 视频列表 -->
+  <section class="dc-section dc-container" id="dc-videos" aria-labelledby="dcVideoTitle">
+    <div class="dc-section-head">
+      <span class="dc-eyebrow">Episodes</span>
+      <h2 class="dc-h2" id="dcVideoTitle">赛事影像 · <span class="dc-key">每日大赛止寸大赛</span>视频精选</h2>
+      <p class="dc-sub">以下为本期单列影像列表，均来自官方发布与创作者上传，数据为发布后七日累计。点击条目可展开评论或收藏，支持分享。</p>
+    </div>
+    <div class="dc-videolist">
+
+      <article class="dc-video-row">
+        <div class="dc-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%230d1a22'/%3E%3Ccircle cx='200' cy='112' r='64' fill='none' stroke='%230f8b8d' stroke-width='4'/%3E%3Cpath d='M186 88 l34 24 -34 24z' fill='%23ffd166'/%3E%3Cg fill='%23e9f2f4' opacity='.5'%3E%3Crect x='24' y='190' width='120' height='6' rx='3'/%3E%3Crect x='160' y='190' width='80' height='6' rx='3'/%3E%3C/g%3E%3C/svg%3E" alt="三十秒止寸赛台全程视频封面，深底青色圆环播放键" width="400" height="225">
+          <div class="dc-play"><i></i></div>
+        </div>
+        <div class="dc-video-body">
+          <h3>三十秒止寸全程｜第 47 期冠军场</h3>
+          <p>单机位无剪辑记录完整挑战过程，含赛前准备、倒计时提示与赛后复盘口述，是了解止寸规则的入门影像。</p>
+          <div>
+            <span class="dc-tag">赛事纪录</span><span class="dc-tag">官方发布</span><span class="dc-tag">4K</span>
+          </div>
+          <div class="dc-video-data">
+            <span>作者：林见山</span><span>播放 24.6万</span><span>点赞 1.9万</span><span>收藏 1.2万</span>
+          </div>
+        </div>
+        <div class="dc-video-actions">
+          <button class="dc-act" type="button" data-like><span class="dc-heart">♥</span> <span data-like-num>19042</span></button>
+          <button class="dc-act" type="button" data-save><span class="dc-heart">♡</span> 收藏</button>
+          <button class="dc-act" type="button" data-comment>评论</button>
+        </div>
+      </article>
+
+      <article class="dc-video-row">
+        <div class="dc-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%233c6e9c'/%3E%3Cpath d='M0 225 L140 80 L250 170 L400 40 V225 Z' fill='%2322384a'/%3E%3Ccircle cx='320' cy='56' r='26' fill='%23ffd166'/%3E%3Cg stroke='%23e9f2f4' stroke-width='2' opacity='.55'%3E%3Cpath d='M20 180 h100'/%3E%3Cpath d='M20 200 h60'/%3E%3C/g%3E%3C/svg%3E" alt="城市延时止寸视频封面，蓝灰山脊线与金色太阳构成" width="400" height="225">
+          <div class="dc-play"><i></i></div>
+        </div>
+        <div class="dc-video-body">
+          <h3>城市延时止寸｜高架桥的二十四小时</h3>
+          <p>定点机位记录一天车流节律，以三十秒为单位的剪辑实验，展示城市空间里被忽略的呼吸感。</p>
+          <div>
+            <span class="dc-tag">城市探索</span><span class="dc-tag">延时摄影</span><span class="dc-tag">精品内容</span>
+          </div>
+          <div class="dc-video-data">
+            <span>作者：周未</span><span>播放 12.4万</span><span>点赞 8640</span><span>收藏 5310</span>
+          </div>
+        </div>
+        <div class="dc-video-actions">
+          <button class="dc-act" type="button" data-like><span class="dc-heart">♥</span> <span data-like-num>8643</span></button>
+          <button class="dc-act" type="button" data-save><span class="dc-heart">♡</span> 收藏</button>
+          <button class="dc-act" type="button" data-comment>评论</button>
+        </div>
+      </article>
+
+      <article class="dc-video-row">
+        <div class="dc-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23f4f7f9'/%3E%3Cg stroke='%230f8b8d' stroke-width='3' fill='none'%3E%3Crect x='60' y='50' width='130' height='74' rx='8'/%3E%3Crect x='210' y='100' width='130' height='74' rx='8'/%3E%3C/g%3E%3Ccircle cx='126' cy='87' r='14' fill='%23ffd166'/%3E%3Ccircle cx='274' cy='137' r='14' fill='%23e0533d'/%3E%3C/svg%3E" alt="剪辑教学视频封面，米白底青绿描边双画框示意" width="400" height="225">
+          <div class="dc-play"><i></i></div>
+        </div>
+        <div class="dc-video-body">
+          <h3>教程干货｜止寸片的节奏表怎么写</h3>
+          <p>十分钟讲清镜头时长与节拍点的对应关系，附一份可直接复用的剪辑节奏表模板。</p>
+          <div>
+            <span class="dc-tag">教程干货</span><span class="dc-tag">剪辑思路</span><span class="dc-tag">实用技巧</span>
+          </div>
+          <div class="dc-video-data">
+            <span>作者：陈默声</span><span>播放 9.8万</span><span>点赞 7210</span><span>收藏 9050</span>
+          </div>
+        </div>
+        <div class="dc-video-actions">
+          <button class="dc-act" type="button" data-like><span class="dc-heart">♥</span> <span data-like-num>7216</span></button>
+          <button class="dc-act" type="button" data-save><span class="dc-heart">♡</span> 收藏</button>
+          <button class="dc-act" type="button" data-comment>评论</button>
+        </div>
+      </article>
+
+      <article class="dc-video-row">
+        <div class="dc-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%231a7f52'/%3E%3Cg fill='%23e9f2f4' opacity='.85'%3E%3Ccircle cx='80' cy='70' r='24'/%3E%3Ccircle cx='150' cy='110' r='18'/%3E%3Ccircle cx='230' cy='66' r='30'/%3E%3Ccircle cx='318' cy='120' r='22'/%3E%3C/g%3E%3Crect y='160' width='400' height='65' fill='%230d4d32'/%3E%3C/svg%3E" alt="新人访谈视频封面，绿色背景白色圆形头像阵列" width="400" height="225">
+          <div class="dc-play"><i></i></div>
+        </div>
+        <div class="dc-video-body">
+          <h3>访谈｜三个普通人为什么坚持投稿半年</h3>
+          <p>来自不同城市的创作者聊止寸挑战如何进入他们的日常，以及社区陪伴带来的真实改变。</p>
+          <div>
+            <span class="dc-tag">人物访谈</span><span class="dc-tag">社区故事</span><span class="dc-tag">成长</span>
+          </div>
+          <div class="dc-video-data">
+            <span>作者：许清野</span><span>播放 7.1万</span><span>点赞 6080</span><span>收藏 3120</span>
+          </div>
+        </div>
+        <div class="dc-video-actions">
+          <button class="dc-act" type="button" data-like><span class="dc-heart">♥</span> <span data-like-num>6082</span></button>
+          <button class="dc-act" type="button" data-save><span class="dc-heart">♡</span> 收藏</button>
+          <button class="dc-act" type="button" data-comment>评论</button>
+        </div>
+      </article>
+
+      <article class="dc-video-row">
+        <div class="dc-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%236b4f9c'/%3E%3Cg fill='none' stroke='%23ffd166' stroke-width='3'%3E%3Cpath d='M60 170 L120 90 L180 140 L250 70 L330 130'/%3E%3C/g%3E%3Cg fill='%23e9f2f4'%3E%3Ccircle cx='120' cy='90' r='7'/%3E%3Ccircle cx='250' cy='70' r='7'/%3E%3C/g%3E%3C/svg%3E" alt="赛事数据复盘视频封面，紫色底金色折线折点" width="400" height="225">
+          <div class="dc-play"><i></i></div>
+        </div>
+        <div class="dc-video-body">
+          <h3>深度测评｜止寸节奏的三组对照实验</h3>
+          <p>用同一段素材做三种节奏处理，对比观众留存与完播数据，用结果说明节奏差异的影响。</p>
+          <div>
+            <span class="dc-tag">深度测评</span><span class="dc-tag">数据观察</span><span class="dc-tag">专业</span>
+          </div>
+          <div class="dc-video-data">
+            <span>作者：陈默声</span><span>播放 5.6万</span><span>点赞 4310</span><span>收藏 4780</span>
+          </div>
+        </div>
+        <div class="dc-video-actions">
+          <button class="dc-act" type="button" data-like><span class="dc-heart">♥</span> <span data-like-num>4318</span></button>
+          <button class="dc-act" type="button" data-save><span class="dc-heart">♡</span> 收藏</button>
+          <button class="dc-act" type="button" data-comment>评论</button>
+        </div>
+      </article>
+
+      <article class="dc-video-row">
+        <div class="dc-video-cover">
+          <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 400 225'%3E%3Crect width='400' height='225' fill='%23e0533d'/%3E%3Cg fill='%23fff3d6'%3E%3Crect x='40' y='50' width='90' height='90' rx='10'/%3E%3Crect x='150' y='80' width='90' height='90' rx='10' opacity='.8'/%3E%3Crect x='260' y='50' width='90' height='90' rx='10' opacity='.6'/%3E%3C/g%3E%3C/svg%3E" alt="品牌故事视频封面，红底米色方块序列构图" width="400" height="225">
+          <div class="dc-play"><i></i></div>
+        </div>
+        <div class="dc-video-body">
+          <h3>品牌故事｜七年，从一间剪辑室开始</h3>
+          <p>回望每日大赛止寸大赛的起点：三台旧相机、一间租来的剪辑室，以及第一批愿意投稿的人。</p>
+          <div>
+            <span class="dc-tag">品牌故事</span><span class="dc-tag">官方发布</span><span class="dc-tag">真实</span>
+          </div>
+          <div class="dc-video-data">
+            <span>作者：编辑部</span><span>播放 15.3万</span><span>点赞 1.4万</span><span>收藏 7600</span>
+          </div>
+        </div>
+        <div class="dc-video-actions">
+          <button class="dc-act" type="button" data-like><span class="dc-heart">♥</span> <span data-like-num>14032</span></button>
+          <button class="dc-act" type="button" data-save><span class="dc-heart">♡</span> 收藏</button>
+          <button class="dc-act" type="button" data-comment>评论</button>
+        </div>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- M15/S3 关键词解析 -->
+  <section class="dc-section dc-keyword" id="dc-keyword" aria-labelledby="dcKeywordTitle">
+    <div class="dc-container">
+      <div class="dc-section-head">
+        <span class="dc-eyebrow">Insight</span>
+        <h2 class="dc-h2" id="dcKeywordTitle">深度解析 · 每日大赛止寸大赛到底是什么</h2>
+        <p class="dc-sub">超过 800 字的完整说明，帮助你理解赛制、内容标准与我们坚持的品牌理念。</p>
+      </div>
+      <div class="dc-keyword-grid">
+        <div class="dc-keyword-visual">
+          <figure>
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 600 800'%3E%3Cdefs%3E%3ClinearGradient id='k1' x1='0' y1='0' x2='0' y2='1'%3E%3Cstop offset='0' stop-color='%2314232e'/%3E%3Cstop offset='1' stop-color='%230f8b8d'/%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='600' height='800' fill='url(%23k1)'/%3E%3Cg fill='none' stroke='%23ffd166' stroke-width='3' opacity='.8'%3E%3Ccircle cx='300' cy='300' r='150'/%3E%3Ccircle cx='300' cy='300' r='110'/%3E%3C/g%3E%3Ctext x='300' y='310' text-anchor='middle' fill='%23f4f7f9' font-family='sans-serif' font-size='64' font-weight='800'%3E30%3C/text%3E%3Ctext x='300' y='345' text-anchor='middle' fill='%23ffd166' font-family='sans-serif' font-size='20'%3ESECONDS%3C/text%3E%3Cg fill='%23f4f7f9' opacity='.85'%3E%3Crect x='90' y='520' width='420' height='12' rx='6'/%3E%3Crect x='90' y='560' width='300' height='12' rx='6' opacity='.7'/%3E%3Crect x='90' y='600' width='360' height='12' rx='6' opacity='.5'/%3E%3C/g%3E%3Ctext x='90' y='700' fill='%23a9c2c9' font-family='sans-serif' font-size='18'%3EDAILY CHALLENGE · RULE BOOK%3C/text%3E%3C/svg%3E" alt="赛事规则解析配图，深青竖版倒计时圆环与规则条目示意" width="600" height="800">
+          </figure>
+          <div class="dc-keyword-note">关键词解释由编辑部撰写，赛制细节以官方公告为准。任何关于报名、评选与奖励的疑问，均可在帮助区查看。</div>
+        </div>
+        <div class="dc-prose">
+          <h3>一、赛制由来：把三十秒做成一件正经事</h3>
+          <p>“止寸”原本是小圈子里的口头说法，指在极短时间内完成一个明确动作并停在预定位置，既考验控制力，也考验对节奏的预判。七年前，我们把这种朴素的练习整理成一套可以公开比较的规则：固定三十秒时长、固定起止点位、固定记录角度，于是<strong>每日大赛止寸大赛</strong>第一次以正式赛事的形态出现。它不是一个追求刺激的短视频玩法，而更像一种可以被反复练习、被认真讨论的技艺。我们坚持每期公布完整规则与评分维度，让每位参赛者在同一把尺子下比较，这也是品牌能持续运营到今天的基础。</p>
+          <p>在规则设计上，我们尽量把主观判断降到最低：时长由计时器记录，点位由地面标记确认，镜头机位要求同时拍到起止区域。评委只在“完成度、节奏感、表达力”三个维度打分，且每位评委的分数会完整公开。这样做看起来繁琐，却让赛事有了长期积累的可能——四十七期下来，我们积累了两千多支可以横向比较的影像，它们构成了这个垂直领域里少见的公开样本库。</p>
+          <h3>二、内容标准：高清、原创、可核对</h3>
+          <p>作为官方网站，我们对上传内容有一套明确的底线要求。第一，必须原创：搬运、拼接、二次压缩的素材不予收录，所有条目在发布前都会做一次来源核对。第二，必须高清：我们建议 1080P 起步，重要场次鼓励 4K 提交，因为止寸动作的细节往往藏在手部与脚步的微小位移里，画质不够会让评分失去依据。第三，必须可核对：每支影像需要附带拍摄时间、地点与器材说明，方便社区复核，也方便后来者复现。</p>
+          <p>这些标准曾让我们放弃过不少流量更高的素材，但从长期看是值得的。品质与口碑不是一句口号，而是由一次次拒绝换来的。也正因为标准稳定，越来越多企业与机构愿意把<strong>每日大赛止寸大赛</strong>的影像作为参考资料，我们的内容生态才真正从“热闹”走向“可信”。</p>
+          <h3>三、社区与创作者：让坚持被看见</h3>
+          <p>社区是我们最看重的部分。平台目前有一万八千余名注册创作者，其中长期稳定投稿的约六百人，他们分布在不同城市，职业各异：有剪辑师、体育老师、纪录片摄影、也有完全零基础的学生。我们在每期赛事后固定做三件事：公布完整榜单、给新人留出独立展示位、把优质作品整理成专题。这三件事看似普通，却让创作者清楚知道自己的努力会被看见，也会被公平对待。</p>
+          <p>社区氛围的养成靠的是细节。评论区默认展示不同维度的评价，既有点评技术的，也有聊心态的；我们鼓励具体、真诚的表达，反对空泛的吹捧与刻薄的挑刺。每逢赛季结束，编辑部会选出一批“陪伴型创作者”——他们未必成绩最好，但持续投稿、认真回复、乐于分享经验。这种对<strong>真实与温暖</strong>的偏好，是品牌性格的一部分，也是很多用户选择留下来的原因。</p>
+          <h3>四、品牌理念：在限制中寻找自由</h3>
+          <p>三十秒是一个很小的容器，但它足够装下很多事：一次呼吸的调整、一次落点的犹豫、一次失败后的重来。我们常用“在限制中寻找自由”来描述止寸的精神——规则越清晰，表达反而越有余地。基于这个理念，我们把品牌的社会责任落在两件具体的事上：一是持续开放免费的赛事影像资料，供学校与社区团体做教学参考；二是每年拿出固定预算支持新人创作者完成第一支正式作品。</p>
+          <p>未来，<strong>每日大赛止寸大赛</strong>仍会保持每期公开、每期复盘的节奏，不追求爆发式扩张，而追求可持续的内容积累。我们相信，一个值得信赖的视频品牌，靠的不是一次喧哗，而是四十七次准时的发布、两千多支可以被回看的影像，以及一群愿意继续按下录制键的人。</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- M4/S4 专题企划 -->
+  <section class="dc-section dc-container" id="dc-topics" aria-labelledby="dcTopicTitle">
+    <div class="dc-section-head">
+      <span class="dc-eyebrow">Series</span>
+      <h2 class="dc-h2" id="dcTopicTitle">专题企划 · 每日大赛止寸大赛<span class="dc-key">系列内容</span></h2>
+      <p class="dc-sub">三个长期更新的专题，覆盖赛事纪录、创作方法与社区故事，全部由官方编辑与社区共创。</p>
+    </div>
+    <div class="dc-topic-grid">
+      <article class="dc-topic">
+        <div class="dc-topic-top">
+          <h3 class="dc-h3">三十秒档案</h3>
+          <span class="dc-status dc-status--live">更新中</span>
+        </div>
+        <p class="dc-meta">逐期留存完整赛事影像与评分表，是回看止寸挑战演变的长期入口。</p>
+        <ol>
+          <li>第 47 期：三十秒微光的四组对照镜头</li>
+          <li>第 46 期：雨天地面湿滑时的点位取舍</li>
+          <li>第 45 期：新人组首次引入双机位记录</li>
+        </ol>
+      </article>
+      <article class="dc-topic">
+        <div class="dc-topic-top">
+          <h3 class="dc-h3">剪辑台前</h3>
+          <span class="dc-status dc-status--open">征集中</span>
+        </div>
+        <p class="dc-meta">面向创作者的实用技巧专题，讲清节奏、素材管理与声音设计的具体做法。</p>
+        <ol>
+          <li>如何用一段素材剪出三种节奏对比</li>
+          <li>止寸片的现场声与环境声配比建议</li>
+          <li>十二小时剪辑台的时间分配实录</li>
+        </ol>
+      </article>
+      <article class="dc-topic">
+        <div class="dc-topic-top">
+          <h3 class="dc-h3">坚持的人</h3>
+          <span class="dc-status dc-status--plan">筹备中</span>
+        </div>
+        <p class="dc-meta">社区人物故事专题，记录长期投稿者的日常与心境，不渲染、不夸大。</p>
+        <ol>
+          <li>体育老师把止寸练习带进课堂</li>
+          <li>一位摄影师的城市观察笔记</li>
+          <li>零基础创作者的第一百支投稿</li>
+        </ol>
+      </article>
+    </div>
+  </section>
+
+  <!-- M5/S5 创作者矩阵（双列简介） -->
+  <section class="dc-section dc-container" id="dc-authors" aria-labelledby="dcAuthorTitle">
+    <div class="dc-section-head">
+      <span class="dc-eyebrow">Creators</span>
+      <h2 class="dc-h2" id="dcAuthorTitle">创作者矩阵 · 每日大赛止寸大赛<span class="dc-key">社区骨干</span></h2>
+      <p class="dc-sub">六位长期投稿的创作者，覆盖赛事纪录、教程、访谈与实验影像。点击卡片可查看完整简介。</p>
+    </div>
+    <div class="dc-author-grid">
+      <article class="dc-author-card">
+        <span class="dc-avatar dc-avatar--a">林</span>
+        <div>
+          <h3>林见山</h3>
+          <div class="dc-author-field">赛事纪录 · 极限止寸</div>
+          <div class="dc-author-nums"><span>作品 86</span><span>粉丝 4.2万</span></div>
+          <p class="dc-author-bio">纪录片摄影出身，擅长单机位长镜头与现场声收录。连续三届参与每日大赛止寸大赛的全程记录，主张“让画面自己说话”，作品节奏克制、信息密度高，是许多新人学习叙事结构的首选参考。</p>
+          <button class="dc-author-more" type="button" data-author="林见山|纪录片摄影出身，擅长单机位长镜头与现场声收录。连续三届参与每日大赛止寸大赛的全程记录，主张让画面自己说话。|作品 86 · 粉丝 4.2万">查看作者档案 ›</button>
+        </div>
+      </article>
+      <article class="dc-author-card">
+        <span class="dc-avatar dc-avatar--b">周</span>
+        <div>
+          <h3>周未</h3>
+          <div class="dc-author-field">城市探索 · 延时摄影</div>
+          <div class="dc-author-nums"><span>作品 61</span><span>粉丝 3.1万</span></div>
+          <p class="dc-author-bio">自由摄影师，习惯在城市里找固定机位，一拍就是一整天。他把止寸节奏理解为城市的呼吸间隔，作品多为延时与定点记录，强调“先观察再举起相机”，也常在社区分享机位选择与光线判断的经验。</p>
+          <button class="dc-author-more" type="button" data-author="周未|自由摄影师，习惯在城市里找固定机位，一拍就是一整天。把止寸节奏理解为城市的呼吸间隔，作品多为延时与定点记录。|作品 61 · 粉丝 3.1万">查看作者档案 ›</button>
+        </div>
+      </article>
+      <article class="dc-author-card">
+        <span class="dc-avatar dc-avatar--c">陈</span>
+        <div>
+          <h3>陈默声</h3>
+          <div class="dc-author-field">教程干货 · 深度测评</div>
+          <div class="dc-author-nums"><span>作品 74</span><span>粉丝 5.6万</span></div>
+          <p class="dc-author-bio">前广告剪辑师，现专注内容教学。擅长把模糊的“手感”拆成可执行的步骤，节奏表模板与对照实验系列广受欢迎。他坚持每条教程都要给出可复现的方法，而不是只展示成品，这使得他的收藏率长期位于社区前列。</p>
+          <button class="dc-author-more" type="button" data-author="陈默声|前广告剪辑师，现专注内容教学。擅长把模糊的手感拆成可执行的步骤，节奏表模板与对照实验系列广受欢迎。|作品 74 · 粉丝 5.6万">查看作者档案 ›</button>
+        </div>
+      </article>
+      <article class="dc-author-card">
+        <span class="dc-avatar dc-avatar--d">许</span>
+        <div>
+          <h3>许清野</h3>
+          <div class="dc-author-field">人物访谈 · 社区故事</div>
+          <div class="dc-author-nums"><span>作品 43</span><span>粉丝 2.8万</span></div>
+          <p class="dc-author-bio">文字记者转型影像创作者，擅长用安静的方式提问。她的访谈很少追问成绩，更关心创作者如何在日常里腾出练习时间。作品气质温和，结构清晰，多次被社区选为“最愿意反复观看”的条目。</p>
+          <button class="dc-author-more" type="button" data-author="许清野|文字记者转型影像创作者，擅长用安静的方式提问。访谈很少追问成绩，更关心创作者如何在日常里腾出练习时间。|作品 43 · 粉丝 2.8万">查看作者档案 ›</button>
+        </div>
+      </article>
+      <article class="dc-author-card">
+        <span class="dc-avatar dc-avatar--e">唐</span>
+        <div>
+          <h3>唐可</h3>
+          <div class="dc-author-field">实验影像 · 声音设计</div>
+          <div class="dc-author-nums"><span>作品 39</span><span>粉丝 1.9万</span></div>
+          <p class="dc-author-bio">声音设计专业在读，喜欢把止寸的动作拆成声音事件来重组。她的作品常被形容为“听完再回看画面会有第二层理解”。除投稿外，她也为社区新人提供免费的声音处理建议，被称作最耐心的技术型创作者。</p>
+          <button class="dc-author-more" type="button" data-author="唐可|声音设计专业在读，喜欢把止寸的动作拆成声音事件来重组。作品常被形容为听完再回看画面会有第二层理解。|作品 39 · 粉丝 1.9万">查看作者档案 ›</button>
+        </div>
+      </article>
+      <article class="dc-author-card">
+        <span class="dc-avatar dc-avatar--f">郑</span>
+        <div>
+          <h3>郑一白</h3>
+          <div class="dc-author-field">新人首秀 · 日常记录</div>
+          <div class="dc-author-nums"><span>作品 28</span><span>粉丝 1.2万</span></div>
+          <p class="dc-author-bio">零基础起步的上班族创作者，用通勤后的半小时练习止寸并记录。他的影像不追求精致，却因为真诚与持续而被大量新人关注。他常说“先把第一支投出去”，这句话后来成了社区新人引导页上的第一行提示。</p>
+          <button class="dc-author-more" type="button" data-author="郑一白|零基础起步的上班族创作者，用通勤后的半小时练习止寸并记录。影像不追求精致，却因为真诚与持续而被大量新人关注。|作品 28 · 粉丝 1.2万">查看作者档案 ›</button>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- M14/M8 榜单与评价 -->
+  <section class="dc-section dc-container" id="dc-board" aria-labelledby="dcBoardTitle">
+    <div class="dc-section-head">
+      <span class="dc-eyebrow">Ranking</span>
+      <h2 class="dc-h2" id="dcBoardTitle">数据榜单与社区<span class="dc-key">口碑评价</span></h2>
+      <p class="dc-sub">榜单按七日完播与收藏加权计算，评价来自社区真实反馈，语气与维度各不相同。</p>
+    </div>
+    <div class="dc-board-grid">
+      <div class="dc-board">
+        <h2 class="dc-h2" style="font-size:22px;">本期热度榜 · 每日大赛止寸大赛</h2>
+        <p class="dc-sub">第 47 期发布后七日数据，每期更新一次。</p>
+        <ol>
+          <li><span class="dc-rank-no">1</span><b>三十秒止寸全程｜冠军场</b><span class="dc-rank-data">24.6万</span></li>
+          <li><span class="dc-rank-no">2</span><b>品牌故事｜七年剪辑室</b><span class="dc-rank-data">15.3万</span></li>
+          <li><span class="dc-rank-no">3</span><b>城市延时止寸｜高架桥</b><span class="dc-rank-data">12.4万</span></li>
+          <li><span class="dc-rank-no">4</span><b>教学｜节奏表怎么写</b><span class="dc-rank-data">9.8万</span></li>
+          <li><span class="dc-rank-no">5</span><b>访谈｜坚持投稿半年</b><span class="dc-rank-data">7.1万</span></li>
+        </ol>
+      </div>
+      <div class="dc-comment-grid">
+        <article class="dc-comment">
+          <div class="dc-comment-top"><span class="dc-comment-avatar">阿</span><span class="dc-comment-name">阿岑</span><span class="dc-meta">· 会员三年</span></div>
+          <p class="dc-comment-text">规则写得真的清楚，第一次看完赛制我就知道该练什么，不是玄学。</p>
+          <div class="dc-comment-stars">★★★★★</div>
+        </article>
+        <article class="dc-comment">
+          <div class="dc-comment-top"><span class="dc-comment-avatar">木</span><span class="dc-comment-name">木子工坊</span><span class="dc-meta">· 创作者</span></div>
+          <p class="dc-comment-text">投稿之后有编辑回复具体建议，连机位问题都指出来了，挺少见。</p>
+          <div class="dc-comment-stars">★★★★★</div>
+        </article>
+        <article class="dc-comment">
+          <div class="dc-comment-top"><span class="dc-comment-avatar">老</span><span class="dc-comment-name">老焦</span><span class="dc-meta">· 观众</span></div>
+          <p class="dc-comment-text">画质确实稳定，用电视投出来看细节也不糊，这点比很多平台强。</p>
+          <div class="dc-comment-stars">★★★★☆</div>
+        </article>
+        <article class="dc-comment">
+          <div class="dc-comment-top"><span class="dc-comment-avatar">小</span><span class="dc-comment-name">小满</span><span class="dc-meta">· 新人</span></div>
+          <p class="dc-comment-text">第一次拍得晃，评论区没人嘲笑，反而教我怎么固定机位，感动。</p>
+          <div class="dc-comment-stars">★★★★★</div>
+        </article>
+        <article class="dc-comment">
+          <div class="dc-comment-top"><span class="dc-comment-avatar">青</span><span class="dc-comment-name">青禾</span><span class="dc-meta">· 教师</span></div>
+          <p class="dc-comment-text">把赛事影像拿给学生做观察练习，节奏和落点的讲解很清楚，好用。</p>
+          <div class="dc-comment-stars">★★★★☆</div>
+        </article>
+        <article class="dc-comment">
+          <div class="dc-comment-top"><span class="dc-comment-avatar">夜</span><span class="dc-comment-name">夜航</span><span class="dc-meta">· 创作者</span></div>
+          <p class="dc-comment-text">希望评选结果里能再多公布一点评分细节，有些分差想学习一下原因。</p>
+          <div class="dc-comment-stars">★★★☆☆</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- M6/S6 故事随笔 + M10/S7 企业动态 + M12 FAQ -->
+  <section class="dc-section dc-container" id="dc-updates" aria-labelledby="dcSplitTitle">
+    <div class="dc-section-head">
+      <span class="dc-eyebrow">Journal</span>
+      <h2 class="dc-h2" id="dcSplitTitle">社区随笔 · 企业动态 · <span class="dc-key">帮助中心</span></h2>
+      <p class="dc-sub">记录每日大赛止寸大赛在社区里发生的具体小事，也同步最近的品牌动态与常见问题。</p>
+    </div>
+    <div class="dc-split">
+      <div>
+        <h3 class="dc-h3" style="margin-bottom:12px;">创作随笔</h3>
+        <div class="dc-news-list">
+          <article class="dc-news">
+            <time>11.18</time>
+            <div>
+              <h3>把练习放进通勤后的半小时</h3>
+              <p>郑一白写他如何在疲惫的下班后仍然按下录制键，以及为什么“短的练习”反而更容易坚持。</p>
+            </div>
+          </article>
+          <article class="dc-news">
+            <time>11.12</time>
+            <div>
+              <h3>一次失败的跟拍，换来更稳的机位</h3>
+              <p>林见山分享雨天跟拍的失误复盘，从地面反光到脚步落点的判断，细节比结论更有用。</p>
+            </div>
+          </article>
+          <article class="dc-news">
+            <time>11.05</time>
+            <div>
+              <h3>声音是看不见的第二个画面</h3>
+              <p>唐可谈环境声的取舍：什么时候该保留现场的杂音，什么时候需要让声音“退后一步”。</p>
+            </div>
+          </article>
+        </div>
+
+        <h3 class="dc-h3" style="margin:26px 0 12px;">企业动态</h3>
+        <div class="dc-news-list">
+          <article class="dc-news">
+            <time>11.20</time>
+            <div>
+              <h3>第 47 期赛事正式开放投稿</h3>
+              <p>主题「三十秒微光」，投稿截止 12 月 1 日，官方同步上线评分维度说明。</p>
+            </div>
+          </article>
+          <article class="dc-news">
+            <time>11.14</time>
+            <div>
+              <h3>创作者成长计划第二季启动</h3>
+              <p>面向新人开放 60 个名额，提供机位指导、剪辑复盘与作品发布支持。</p>
+            </div>
+          </article>
+          <article class="dc-news">
+            <time>11.08</time>
+            <div>
+              <h3>影像资料库新增公开条目</h3>
+              <p>第 40 至 46 期完整评分表与索引已开放，供教学与研究参考。</p>
+            </div>
+          </article>
+          <article class="dc-news">
+            <time>11.02</time>
+            <div>
+              <h3>社区评论规范更新说明</h3>
+              <p>强调具体、真诚的反馈，新增对技术讨论的鼓励条款，细则已在帮助区公布。</p>
+            </div>
+          </article>
+        </div>
+      </div>
+
+      <div class="dc-faq">
+        <h3 class="dc-h3" style="margin-bottom:12px;">常见问题</h3>
+        <details>
+          <summary>如何报名参加每日大赛止寸大赛？</summary>
+          <p>在页头点击“投稿报名”，填写作品标题、拍摄说明与素材链接即可。报名后 48 小时内会收到编辑核对反馈，通过后进入当期展示。</p>
+        </details>
+        <details>
+          <summary>对拍摄器材有硬性要求吗？</summary>
+          <p>没有品牌限制，但建议 1080P 起步、固定机位。重要场次鼓励 4K，因为止寸的细节多在手部与脚步的微小位移上。</p>
+        </details>
+        <details>
+          <summary>评分是怎么计算的？</summary>
+          <p>由完成度、节奏感、表达力三项加权，评委分数在每期结束后完整公开。我们不使用观众投票直接决定名次，避免流量干扰判断。</p>
+        </details>
+        <details>
+          <summary>可以用手机拍摄参赛作品吗？</summary>
+          <p>可以。只要画面稳定、起止点位清晰、现场声可辨认，手机作品同样会被正常评分，社区里也有不少手机拍摄的高分条目。</p>
+        </details>
+        <details>
+          <summary>投稿后多久可以看到结果？</summary>
+          <p>常规在每期截止后五个工作日内公布完整榜单，并在专题「三十秒档案」中同步留存影像与评分表。</p>
+        </details>
+        <details>
+          <summary>是否可以在其他平台同步发布？</summary>
+          <p>欢迎同步发布，但请保留原创声明与赛事信息。我们鼓励内容流动，只要求不冒用他人素材、不篡改评分结果。</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- M11 合作品牌 + M13 联系投稿 -->
+  <section class="dc-section dc-container" id="dc-partners" aria-labelledby="dcPartnerTitle">
+    <div class="dc-section-head">
+      <span class="dc-eyebrow">Partners</span>
+      <h2 class="dc-h2" id="dcPartnerTitle">合作品牌与<span class="dc-key">投稿入口</span></h2>
+      <p class="dc-sub">每日大赛止寸大赛与影像器材、场地与技术伙伴保持长期合作，共同支持创作者完成第一支正式作品。</p>
+    </div>
+    <div class="dc-partners">
+      <div class="dc-partner">光屿影像<small>器材支持</small></div>
+      <div class="dc-partner">长桥场地<small>赛事场地</small></div>
+      <div class="dc-partner">回声工坊<small>声音技术</small></div>
+      <div class="dc-partner">青蓝学院<small>教育合作</small></div>
+    </div>
+    <div style="margin-top:26px;display:flex;gap:12px;flex-wrap:wrap;align-items:center;">
+      <button class="dc-btn dc-btn--solid" type="button" id="dcSubmitBtn2">我要投稿报名</button>
+      <button class="dc-btn dc-btn--ghost" type="button" id="dcReportBtn">反馈与举报</button>
+      <button class="dc-btn dc-btn--ghost" type="button" id="dcShareBtn2">复制门户链接</button>
+      <span class="dc-meta">投稿邮箱：studio@zhichun-daily.example（示例地址，以官方公告为准）</span>
+    </div>
+  </section>
+
+</main>
+
+<!-- S8 页脚 -->
+<footer class="dc-footer">
+  <div class="dc-container">
+    <div class="dc-footer-grid">
+      <div>
+        <h4>止寸影像 · 每日大赛止寸大赛官方网站</h4>
+        <p>深耕止寸挑战垂直领域的原创视频品牌，持续运营第七年。我们以高清、正版、专业的内容标准，为创作者与企业搭建值得信赖的内容生态，让每一次三十秒的坚持都能被看见。</p>
+        <p style="margin-top:10px;">微信公众号：止寸影像｜内容合作与投稿请联系编辑部</p>
+      </div>
+      <div>
+        <h4>内容</h4>
+        <ul>
+          <li><a href="#dc-videos">赛事影像</a></li>
+          <li><a href="#dc-keyword">赛事解读</a></li>
+          <li><a href="#dc-topics">专题企划</a></li>
+          <li><a href="#dc-authors">创作者矩阵</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>社区</h4>
+        <ul>
+          <li><a href="#dc-board">榜单与评价</a></li>
+          <li><a href="#dc-updates">企业动态</a></li>
+          <li><a href="#dc-faq">帮助中心</a></li>
+          <li><a href="#dc-partners">合作与投稿</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>关于</h4>
+        <ul>
+          <li>品牌故事</li>
+          <li>内容标准</li>
+          <li>社会责任</li>
+          <li>版权与许可</li>
+        </ul>
+      </div>
+    </div>
+    <div class="dc-footer-bottom">
+      <span>© 2026 止寸影像 版权所有 · 每日大赛止寸大赛官方网站 · 持续运营中</span>
+      <span>备案号：示例备 2026-047 号 · 内容均为原创或已获授权</span>
+    </div>
+  </div>
+</footer>
+
+<button class="dc-backtop" type="button" id="dcBackTop" aria-label="回到顶部" data-show="false">↑</button>
+
+<!-- 弹窗：作者 / 评论 / 投稿 / 举报 -->
+<div class="dc-modal" id="dcModal" role="dialog" aria-modal="true" aria-labelledby="dcModalTitle">
+  <div class="dc-modal-box">
+    <button class="dc-modal-close" type="button" id="dcModalClose" aria-label="关闭">✕</button>
+    <h3 id="dcModalTitle">标题</h3>
+    <div id="dcModalBody"></div>
+  </div>
+</div>
+
+<div class="dc-toast" id="dcToast" role="status" aria-live="polite"></div>
+
+<script>
+(function(){
+  "use strict";
+
+  /* ---------- 工具 ---------- */
+  var toast = document.getElementById('dcToast');
+  var toastTimer = null;
+  function showToast(msg){
+    if(!toast) return;
+    toast.textContent = msg;
+    toast.setAttribute('data-show','true');
+    clearTimeout(toastTimer);
+    toastTimer = setTimeout(function(){
+      toast.setAttribute('data-show','false');
+    }, 2200);
+  }
+
+  /* ---------- 移动端导航折叠 ---------- */
+  var navToggle = document.getElementById('dcNavToggle');
+  var nav = document.getElementById('dcNav');
+  if(navToggle && nav){
+    navToggle.addEventListener('click', function(){
+      var open = nav.getAttribute('data-open') === 'true';
+      nav.setAttribute('data-open', open ? 'false' : 'true');
+      navToggle.setAttribute('aria-expanded', open ? 'false' : 'true');
+    });
+    nav.addEventListener('click', function(e){
+      if(e.target.tagName === 'A' && window.innerWidth <= 1000){
+        nav.setAttribute('data-open','false');
+        navToggle.setAttribute('aria-expanded','false');
+      }
+    });
+  }
+
+  /* ---------- 搜索前端反馈 ---------- */
+  var searchInput = document.getElementById('dcSearchInput');
+  var searchBtn = document.getElementById('dcSearchBtn');
+  var searchMsg = document.getElementById('dcSearchMsg');
+  var searchIndex = [
+    {t:'三十秒止寸全程｜第 47 期冠军场', k:'赛事纪录 官方发布 4K'},
+    {t:'城市延时止寸｜高架桥的二十四小时', k:'城市探索 延时摄影'},
+    {t:'教程干货｜止寸片的节奏表怎么写', k:'教程 剪辑思路'},
+    {t:'访谈｜三个普通人为什么坚持投稿半年', k:'人物访谈 社区故事'},
+    {t:'深度测评｜止寸节奏的三组对照实验', k:'深度测评 数据'},
+    {t:'品牌故事｜七年，从一间剪辑室开始', k:'品牌故事 官方发布'},
+    {t:'三十秒档案 专题', k:'专题 赛事纪录'},
+    {t:'剪辑台前 专题', k:'专题 教程'},
+    {t:'坚持的人 专题', k:'专题 人物访谈'},
+    {t:'林见山 创作者档案', k:'创作者 赛事纪录'},
+    {t:'陈默声 创作者档案', k:'创作者 教程'},
+    {t:'投稿报名与评分规则', k:'帮助 报名'}
+  ];
+  function runSearch(){
+    if(!searchInput || !searchMsg) return;
+    var q = searchInput.value.trim();
+    if(!q){
+      searchMsg.style.display = 'none';
+      searchMsg.textContent = '';
+      return;
+    }
+    var hits = searchIndex.filter(function(item){
+      return (item.t + item.k).indexOf(q) !== -1;
+    });
+    searchMsg.style.display = 'block';
+    if(hits.length){
+      searchMsg.textContent = '找到 ' + hits.length + ' 条与「' + q + '」相关的内容：' + hits.slice(0,3).map(function(h){return h.t;}).join('；') + '。';
+    }else{
+      searchMsg.textContent = '暂未找到与「' + q + '」直接匹配的条目，可尝试“止寸”“赛制”“创作者”等关键词。';
+    }
+  }
+  if(searchBtn) searchBtn.addEventListener('click', runSearch);
+  if(searchInput){
+    searchInput.addEventListener('keydown', function(e){
+      if(e.key === 'Enter'){ e.preventDefault(); runSearch(); }
+    });
+    searchInput.addEventListener('input', function(){
+      if(searchMsg && searchMsg.style.display === 'block') runSearch();
+    });
+  }
+
+  /* ---------- 点赞 / 收藏 ---------- */
+  document.querySelectorAll('[data-like]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var liked = btn.getAttribute('data-liked') === 'true';
+      var numEl = btn.querySelector('[data-like-num]');
+      var base = parseInt((numEl ? numEl.textContent : '0').replace(/\D/g,''),10) || 0;
+      if(liked){
+        btn.setAttribute('data-liked','false');
+        if(numEl) numEl.textContent = String(Math.max(0, base - 1));
+        showToast('已取消点赞');
+      }else{
+        btn.setAttribute('data-liked','true');
+        if(numEl) numEl.textContent = String(base + 1);
+        showToast('点赞成功，感谢支持');
+      }
+    });
+  });
+  document.querySelectorAll('[data-save]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var saved = btn.getAttribute('data-saved') === 'true';
+      btn.setAttribute('data-saved', saved ? 'false' : 'true');
+      var heart = btn.querySelector('.dc-heart');
+      if(heart) heart.textContent = saved ? '♡' : '♥';
+      showToast(saved ? '已取消收藏' : '已收藏到你的片单');
+    });
+  });
+
+  /* ---------- 弹窗 ---------- */
+  var modal = document.getElementById('dcModal');
+  var modalTitle = document.getElementById('dcModalTitle');
+  var modalBody = document.getElementById('dcModalBody');
+  var modalClose = document.getElementById('dcModalClose');
+  function openModal(title, html){
+    if(!modal) return;
+    modalTitle.textContent = title;
+    modalBody.innerHTML = html;
+    modal.setAttribute('data-open','true');
+  }
+  function closeModal(){
+    if(!modal) return;
+    modal.setAttribute('data-open','false');
+  }
+  if(modalClose) modalClose.addEventListener('click', closeModal);
+  if(modal){
+    modal.addEventListener('click', function(e){
+      if(e.target === modal) closeModal();
+    });
+    document.addEventListener('keydown', function(e){
+      if(e.key === 'Escape') closeModal();
+    });
+  }
+
+  /* ---------- 评论 ---------- */
+  document.querySelectorAll('[data-comment]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var row = btn.closest('.dc-video-row');
+      var title = row ? row.querySelector('.dc-video-body h3').textContent : '本期影像';
+      openModal('参与讨论', '<p>正在浏览：<strong>' + title + '</strong></p>' +
+        '<div class="dc-field"><label for="dcCommentInput">写下你的具体建议</label>' +
+        '<textarea id="dcCommentInput" rows="4" placeholder="例如：起止点位的标记方式可以再明确一点"></textarea></div>' +
+        '<div style="margin-top:14px;display:flex;gap:10px;"><button class="dc-btn dc-btn--solid" type="button" id="dcCommentSend">发布评论</button>' +
+        '<button class="dc-btn dc-btn--ghost" type="button" id="dcCommentCancel">取消</button></div>');
+      var send = document.getElementById('dcCommentSend');
+      var cancel = document.getElementById('dcCommentCancel');
+      if(cancel) cancel.addEventListener('click', closeModal);
+      if(send) send.addEventListener('click', function(){
+        var val = (document.getElementById('dcCommentInput') || {}).value || '';
+        if(val.trim().length < 4){
+          showToast('请至少写 4 个字的具体建议');
+          return;
+        }
+        closeModal();
+        showToast('评论已提交，将在审核后展示');
+      });
+    });
+  });
+
+  /* ---------- 作者档案 ---------- */
+  document.querySelectorAll('[data-author]').forEach(function(btn){
+    btn.addEventListener('click', function(){
+      var raw = btn.getAttribute('data-author') || '';
+      var parts = raw.split('|');
+      var name = parts[0] || '创作者';
+      var bio = parts[1] || '';
+      var nums = parts[2] || '';
+      openModal(name + ' · 创作者档案', '<p>' + bio + '</p><p class="dc-meta" style="margin-top:10px;">' + nums + '</p>' +
+        '<p style="margin-top:10px;">长期参与每日大赛止寸大赛投稿，作品在社区获得稳定关注，欢迎在影像列表中查看其全部条目。</p>' +
+        '<button class="dc-btn dc-btn--solid" type="button" style="margin-top:14px;" id="dcAuthorFollow">关注该作者</button>');
+      var follow = document.getElementById('dcAuthorFollow');
+      if(follow) follow.addEventListener('click', function(){
+        closeModal();
+        showToast('已关注 ' + name);
+      });
+    });
+  });
+
+  /* ---------- 投稿 / 举报 ---------- */
+  function openSubmit(){
+    openModal('投稿报名 · 每日大赛止寸大赛', '<p>填写基本信息，编辑部会在 48 小时内回复核对结果。</p>' +
+      '<div class="dc-field"><label for="dcTitleInput">作品标题</label><input id="dcTitleInput" type="text" placeholder="例如：三十秒微光·我的第一支止寸片"></div>' +
+      '<div class="dc-field"><label for="dcNameInput">创作者昵称</label><input id="dcNameInput" type="text" placeholder="你的社区昵称"></div>' +
+      '<div class="dc-field"><label for="dcDescInput">拍摄说明</label><textarea id="dcDescInput" rows="3" placeholder="拍摄时间、地点、器材与机位说明"></textarea></div>' +
+      '<button class="dc-btn dc-btn--solid" type="button" style="margin-top:14px;" id="dcSubmitSend">提交报名</button>');
+    var send = document.getElementById('dcSubmitSend');
+    if(send) send.addEventListener('click', function(){
+      var t = (document.getElementById('dcTitleInput')||{}).value||'';
+      var n = (document.getElementById('dcNameInput')||{}).value||'';
+      if(t.trim().length < 4 || n.trim().length < 2){
+        showToast('请填写完整的作品标题与昵称');
+        return;
+      }
+      closeModal();
+      showToast('报名已提交，请留意编辑回复');
+    });
+  }
+  var submitBtn = document.getElementById('dcSubmitBtn');
+  var submitBtn2 = document.getElementById('dcSubmitBtn2');
+  if(submitBtn) submitBtn.addEventListener('click', openSubmit);
+  if(submitBtn2) submitBtn2.addEventListener('click', openSubmit);
+
+  var reportBtn = document.getElementById('dcReportBtn');
+  if(reportBtn) reportBtn.addEventListener('click', function(){
+    openModal('反馈与举报', '<p>我们重视社区秩序。请描述具体问题，编辑部会尽快核实。</p>' +
+      '<div class="dc-field"><label for="dcReportText">问题描述</label><textarea id="dcReportText" rows="4" placeholder="请说明涉及的条目与具体情况"></textarea></div>' +
+      '<button class="dc-btn dc-btn--solid" type="button" style="margin-top:14px;" id="dcReportSend">提交反馈</button>');
+    var send = document.getElementById('dcReportSend');
+    if(send) send.addEventListener('click', function(){
+      var v = (document.getElementById('dcReportText')||{}).value||'';
+      if(v.trim().length < 6){
+        showToast('请补充更具体的问题描述');
+        return;
+      }
+      closeModal();
+      showToast('反馈已收到，感谢你共同维护社区');
+    });
+  });
+
+  /* ---------- 分享 / 复制链接 ---------- */
+  function copyLink(){
+    var link = 'https://zhichun-daily.example/';
+    if(navigator.clipboard && navigator.clipboard.writeText){
+      navigator.clipboard.writeText(link).then(function(){
+        showToast('链接已复制，欢迎分享给同好');
+      }).catch(function(){
+        showToast('已准备好分享链接，可手动复制');
+      });
+    }else{
+      showToast('已准备好分享链接，可手动复制');
+    }
+  }
+  var shareBtn = document.getElementById('dcShareBtn');
+  var shareBtn2 = document.getElementById('dcShareBtn2');
+  if(shareBtn) shareBtn.addEventListener('click', copyLink);
+  if(shareBtn2) shareBtn2.addEventListener('click', copyLink);
+
+  /* ---------- 数字滚动 ---------- */
+  var statEls = document.querySelectorAll('.dc-stat-num[data-count]');
+  var statDone = false;
+  function animateStats(){
+    if(statDone) return;
+    statDone = true;
+    statEls.forEach(function(el){
+      var target = parseInt(el.getAttribute('data-count'),10) || 0;
+      var inner = el.querySelector('span');
+      if(!inner) return;
+      var suffix = el.querySelector('small') ? el.querySelector('small').outerHTML : '';
+      var start = 0;
+      var duration = 900;
+      var t0 = null;
+      function step(ts){
+        if(!t0) t0 = ts;
+        var p = Math.min(1,(ts - t0)/duration);
+        var eased = 1 - Math.pow(1 - p, 3);
+        var val = Math.round(target * eased);
+        inner.textContent = String(val);
+        if(p < 1){ requestAnimationFrame(step); }
+      }
+      requestAnimationFrame(step);
+    });
+  }
+  if(statEls.length){
+    if('IntersectionObserver' in window){
+      var io = new IntersectionObserver(function(entries){
+        entries.forEach(function(en){
+          if(en.isIntersecting) animateStats();
+        });
+      }, {threshold:0.3});
+      statEls.forEach(function(el){ io.observe(el); });
+    }else{
+      animateStats();
+    }
+  }
+
+  /* ---------- 回到顶部 ---------- */
+  var backTop = document.getElementById('dcBackTop');
+  window.addEventListener('scroll', function(){
+    if(!backTop) return;
+    if(window.scrollY > 600){
+      backTop.setAttribute('data-show','true');
+    }else{
+      backTop.setAttribute('data-show','false');
+    }
+  }, {passive:true});
+  if(backTop) backTop.addEventListener('click', function(){
+    window.scrollTo({top:0, behavior:'smooth'});
+  });
+
+})();
+</script>
+</body>
+  </html>
